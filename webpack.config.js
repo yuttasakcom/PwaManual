@@ -1,11 +1,13 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const workboxPlugin = require('workbox-webpack-plugin')
+const DIST_DIR = 'dist'
 
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, DIST_DIR),
         filename: 'bundle.js'
     },
     module: {
@@ -26,5 +28,10 @@ module.exports = {
                 removeAttributeQuotes: true
             },
         }),
+        new workboxPlugin({
+            globDirectory: path.resolve(__dirname, ('src')),
+            globPatterns: ['**/*.{html,js,css}'],
+            swDest: path.join(DIST_DIR, 'sw.js'),
+        })
     ]
 }
