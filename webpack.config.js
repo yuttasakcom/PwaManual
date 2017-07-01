@@ -29,7 +29,6 @@ module.exports = {
             },
         }),
         new workboxPlugin({
-            globDirectory: path.resolve(__dirname, ('src')),
             globPatterns: ['**/*.{html,js,css}'],
             swDest: path.join(DIST_DIR, 'sw.js'),
         })
