@@ -1,9 +1,9 @@
 ## PWA 101
 
 ## สารบัญ
-- [Workbox](#workbox)
+- [ServiceWorker](#serviceworker)
 
-## Workbox
+## ServiceWorker
 การสร้าง service worker จะทำหลังจากที่พัฒนาโปรเจ็กต์เสร็จและได้ทำการ build โปรเจ็กต์เสร็จเรียบร้อยแล้ว เพราะจะได้ cache ไฟล์ได้ครบถ้วนสมบูรณ์
 
 ขั้นตอนการสร้างสร้าง sw.js<br>
