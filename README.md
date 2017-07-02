@@ -6,7 +6,7 @@
 
 ## Manifest
 สำหรับ Add to home screen for Android and modern mobile browsers<br>
-สร้างไฟล์ manifest.json (เก็บไว้ที่ statics)<br>
+สร้างไฟล์ manifest.json (เก็บไว้ที่ static)<br>
 ```json
 {
   "name": "PWA101",
@@ -29,7 +29,7 @@
   "theme_color": "#4DBA87"
 }
 ```
-import เข้าไปใช้งานที่ index.html `<link rel="manifest" href="/statics/manifest.json">`<br>
+import เข้าไปใช้งานที่ index.html `<link rel="manifest" href="/static/manifest.json">`<br>
 
 สำหรับ Add to home screen for Safari on iOS ให้เพิ่ม<br>
 `<meta name="apple-mobile-web-app-capable" content="yes">`<br>
