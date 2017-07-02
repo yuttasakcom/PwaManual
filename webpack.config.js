@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const workboxPlugin = require('workbox-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const DIST_DIR = 'dist'
 
 module.exports = {
@@ -28,9 +28,9 @@ module.exports = {
         removeAttributeQuotes: true
       },
     }),
-    new workboxPlugin({
-      globPatterns: ['**/*.{html,js,css}'],
-      swDest: path.join(DIST_DIR, 'sw.js'),
-    })
+    new CopyWebpackPlugin([
+      { from: 'sw.js', to: 'sw.js' },
+      { from: 'workbox-sw.prod.v1.0.1.js', to: 'workbox-sw.prod.v1.0.1.js' }
+    ])
   ]
 }
