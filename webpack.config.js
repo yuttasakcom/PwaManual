@@ -30,7 +30,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: 'sw.js', to: 'sw.js' },
-      { from: 'workbox-sw.prod.v1.0.1.js', to: 'workbox-sw.prod.v1.0.1.js' }
+      { from: 'workbox-sw.prod.v1.0.1.js', to: 'workbox-sw.prod.v1.0.1.js' },
+      { from: 'statics', to: 'statics' },
     ])
   ]
 }

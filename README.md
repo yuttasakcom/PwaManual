@@ -1,7 +1,45 @@
 ## PWA 101
 
 ## สารบัญ
+- [Manifest](#manifest)
 - [ServiceWorker](#serviceworker)
+
+## Manifest
+สำหรับ Add to home screen for Android and modern mobile browsers<br>
+สร้างไฟล์ manifest.json (เก็บไว้ที่ statics)<br>
+```json
+{
+  "name": "PWA101",
+  "short_name": "PWA101",
+  "icons": [
+    {
+      "src": "/static/img/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87"
+}
+```
+import เข้าไปใช้งานที่ index.html `<link rel="manifest" href="/statics/manifest.json">`<br>
+
+สำหรับ Add to home screen for Safari on iOS ให้เพิ่ม<br>
+`<meta name="apple-mobile-web-app-capable" content="yes">`<br>
+`<meta name="apple-mobile-web-app-status-bar-style" content="black">`<br>
+`<meta name="apple-mobile-web-app-title" content="PWA101">`<br>
+`<link rel="apple-touch-icon" href="/static/img/icons/apple-touch-icon-152x152.png">`<br>
+
+สำหรับ Add to home screen for Windows ให้เพิ่ม<br>
+`<meta name="msapplication-TileImage" content="/static/img/icons/msapplication-icon-144x144.png">`<br>
+`<meta name="msapplication-TileColor" content="#000000">`
 
 ## ServiceWorker
 การสร้าง service worker จะทำหลังจากที่พัฒนาโปรเจ็กต์เสร็จและได้ทำการ build โปรเจ็กต์เสร็จเรียบร้อยแล้ว เพราะจะได้ cache ไฟล์ได้ครบถ้วนสมบูรณ์
