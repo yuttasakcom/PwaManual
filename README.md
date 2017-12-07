@@ -1,4 +1,5 @@
-## PWA 101
+## PWA Manual
+> คู่มือการใช้งาน PWA
 
 ## สารบัญ
 - [Manifest](#manifest)
