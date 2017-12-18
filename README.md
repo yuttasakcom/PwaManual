@@ -10,7 +10,7 @@
 - Caching Dynamic Data with IndexdDB
 - Responsive Design
 - Background Sync
-- Web Push Notification
+- [Web Push Notification](https://github.com/yuttasakcom/PwaManual/tree/master/examples/02.maximilian/01.web-push-notifications)
 - Media API (Camera) & Gelocation
 - Automated SW Management
 - SPAs Vs PWAs
